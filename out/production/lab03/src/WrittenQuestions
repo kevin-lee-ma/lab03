@@ -1,0 +1,5 @@
+1. Set a breakpoint in the first line of the arrive method.
+2. Set a breakpoint in the first line of the Restaurant constructor. Then step out.
+3. Step in to the startManaging method.
+4. Step out
+5. Step over the reservations.add calls, and step into the Restaurant construcot.r

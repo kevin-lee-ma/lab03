@@ -62,14 +62,14 @@ public class Restaurant implements IRestaurant {
     System.out.print(party + " arrived at " + this + ". ");
 
     // Seat the arriving party if there is room; otherwise, make them wait
-    if (seatedParties.size() > numTables) {
+    if (seatedParties.size() >= numTables) {
       wait(party);
     } else {
       seat(party);
     }
+    upcomingReservations.remove(party);
   }
 
-  @Override
   public void depart(Party party) {
     if (!seatedParties.contains(party)) {
       System.out.println(party + " has not yet been seated at " + this + "!");
